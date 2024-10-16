@@ -6,6 +6,10 @@
     @apply bg-color-secondary px-9 py-3 rounded-md capitalize hover:opacity-80 ease-in duration-300;
 }
 
+.btn-card{
+    @apply bg-color-primary w-full px-9 py-3 rounded-md capitalize hover:bg-color-secondary ease-in duration-300;
+}
+
 .title{
     @apply text-3xl md:text-4xl font-bold leading-snug mb-4;
 }
@@ -30,6 +34,45 @@
     display: none;
 }
 
+.user-pic{
+    transition: all 0.5s ease;
+}
+
 .user-text.active-text{
     display: block;
+    animation: moveup 1s line forwards;
+}
+
+@keyframes moveup {
+    0% {
+        margin-top: 50px;
+        opacity: 0;
+    }
+
+    50% {
+        margin-top: 40px;
+        opacity: 0.1;
+    }
+
+    100% {
+        margin-top: 0px;
+        opacity: 0;
+    }
+
+}
+
+.crd {
+
+    perspective: 1000px;
+
+}
+
+.front , .back{
+
+    backface-visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.front{
+    overflow: hidden;
 }

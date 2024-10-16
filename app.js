@@ -23,7 +23,7 @@
 
         // testimonial
         const userPics = document.querySelectorAll('.user-pic');
-        const activeTexts = document.querySelectorAll('.active-text');
+        const activeTexts = document.querySelectorAll('.user-text');
 
         function showPreview() {
 
