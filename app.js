@@ -39,7 +39,27 @@
 
             userPics[i].classList.add('active-pic');
             activeTexts[i].classList.add('active-text');
-
             
         }
+
+        const togglebtn = document.querySelector('#togglebtn');
+        const card_1_front = document.querySelectorAll('#card_1_front');
+        const card_1_back = document.querySelectorAll('#card_1_back');
+
+        console.log(togglebtn);
+        console.log(card_1_front);
+        console.log(card_1_back);
+        
+        
+
+        togglebtn.addEventListener('change', () => {
+            card_1_front.forEach(card => {
+                card.classList.toggle('-rotate-y-180');
+            })
+            //card_1_front.classList.toggle('-rotate-y-180');
+            //card_1_back.classList.toggle('rotate-y-180');
+            card_1_back.forEach(cardb => {
+                cardb.classList.toggle('rotate-y-180');
+            })
+        })
  
